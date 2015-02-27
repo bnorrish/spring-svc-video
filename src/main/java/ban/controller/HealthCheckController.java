@@ -1,15 +1,17 @@
-package controller;
+package ban.controller;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import model.HealthCheck;
+import ban.model.HealthCheck;
 
 @RestController
+@ComponentScan
 public class HealthCheckController {
 
-  @RequestMapping(value="/healthcheck",method= RequestMethod.GET)
+  @RequestMapping(value="/healthcheck",method=RequestMethod.GET)
   public HealthCheck greeting() {
     HealthCheck hc = new HealthCheck();
     hc.setName("video-service");
@@ -17,4 +19,8 @@ public class HealthCheckController {
     return hc;
   }
 
+  @RequestMapping("/")
+  public String index() {
+    return "Greetings from Spring Boot!";
+  }
 }

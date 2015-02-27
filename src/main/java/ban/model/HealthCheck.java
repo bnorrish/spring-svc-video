@@ -1,4 +1,4 @@
-package model;
+package ban.model;
 
 public class HealthCheck {
 
