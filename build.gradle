@@ -23,6 +23,7 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.amazonaws:aws-java-sdk-dynamodb:1.9.25")
     testCompile("junit:junit")
 }
 

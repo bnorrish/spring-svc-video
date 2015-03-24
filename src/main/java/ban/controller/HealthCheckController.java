@@ -12,7 +12,7 @@ import ban.model.HealthCheck;
 public class HealthCheckController {
 
   @RequestMapping(value="/healthcheck",method=RequestMethod.GET)
-  public HealthCheck greeting() {
+  public HealthCheck healthCheck() {
     HealthCheck hc = new HealthCheck();
     hc.setName("video-service");
     hc.setVersion("0.0.1");
