@@ -1,6 +1,8 @@
 package ban.model.view;
 
-
+/**
+ * Video class as presented as Resource in REST endpoints 
+ */
 public class Video {
 
   private String id;
