@@ -11,6 +11,11 @@ import ban.model.view.Video;
 public class Mapper {
 
   public Video mapToViewModel(ban.model.persistence.Video pVideo) {
+
+    if(pVideo == null) {
+      return null;
+    }
+
     Video video = new Video();
     video.setId(pVideo.getId());
     return video;
