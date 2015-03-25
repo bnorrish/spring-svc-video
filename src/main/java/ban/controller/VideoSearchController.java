@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import ban.model.Video;
+import ban.model.view.Video;
 import ban.service.VideoSearchService;
 
 @RestController
