@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import ban.client.AwsDynamoClient;
+import ban.model.persistence.VideoD;
 import ban.model.view.Video;
 
 @Component
@@ -31,7 +32,7 @@ public class VideoSearchService {
    * @return The video in View model
    */
   public Video getVideo(String id){
-    ban.model.persistence.Video pVideo = dynamoClient.getVideo(id);
+    VideoD pVideo = dynamoClient.getVideo(id);
     return mapper.mapToViewModel(pVideo);
   }
 }

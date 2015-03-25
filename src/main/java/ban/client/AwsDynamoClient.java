@@ -8,7 +8,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 
 import org.springframework.stereotype.Component;
 
-import ban.model.persistence.Video;
+import ban.model.persistence.VideoD;
 
 @Component
 public class AwsDynamoClient {
@@ -22,8 +22,8 @@ public class AwsDynamoClient {
     dynamoMapper = new DynamoDBMapper(dynamoClient);
   }
 
-  public Video getVideo(String id) {
-    return dynamoMapper.load(Video.class,id);
+  public VideoD getVideo(String id) {
+    return dynamoMapper.load(VideoD.class,id);
   }
 
 }

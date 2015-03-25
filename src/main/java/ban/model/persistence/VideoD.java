@@ -8,7 +8,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
  */
 
 @DynamoDBTable(tableName="Video")
-public class Video {
+public class VideoD {
 
   @DynamoDBHashKey(attributeName="VideoId")
   private String id;
