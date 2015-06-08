@@ -28,11 +28,12 @@ public class VideoSearchService {
 
   /**
    * Retrieves the persistence Video from DynamoClient, maps to View model
-   * @param id Video Identifier
+   * @param videoId Video Identifier
    * @return The video in View model
    */
-  public Video getVideo(String id){
-    VideoD pVideo = dynamoClient.getVideo(id);
+  public Video getVideo(String videoId){
+    VideoD pVideo = dynamoClient.getVideo(videoId);
     return mapper.mapToViewModel(pVideo);
   }
+
 }

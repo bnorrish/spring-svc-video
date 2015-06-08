@@ -19,7 +19,12 @@ public class Mapper {
     }
 
     Video video = new Video();
+
     video.setId(pVideo.getId());
+    video.setProviderId(pVideo.getProviderId());
+    video.setProviderVideoId(pVideo.getProviderVideoId());
+    video.setTitle(pVideo.getTitle());
+
     return video;
   }
 }
