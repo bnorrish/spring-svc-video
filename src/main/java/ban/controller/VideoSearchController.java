@@ -48,7 +48,11 @@ public class VideoSearchController {
 
     for(Integer videoId : dancerSearchService.getVideosByWsdcId(wsdcId)) {
 
-      videos.add(videoSearchService.getVideo(videoId.toString()));
+      Video v = videoSearchService.getVideo(videoId.toString());
+
+      if(v!=null) {
+        videos.add(v);
+      }
     }
 
     return videos;
