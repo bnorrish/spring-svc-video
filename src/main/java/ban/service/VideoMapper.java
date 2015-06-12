@@ -11,7 +11,7 @@ import ban.model.view.Video;
  * http://kenblair.net/orika-spring-easy-bean-mapping/
  */
 @Component
-public class Mapper {
+public class VideoMapper {
 
   public Video mapToViewModel(VideoD pVideo) {
 
@@ -25,6 +25,7 @@ public class Mapper {
     video.setProviderId(pVideo.getProviderId());
     video.setProviderVideoId(pVideo.getProviderVideoId());
     video.setTitle(pVideo.getTitle());
+    video.setDancerIdList(pVideo.getDancerIdList());
 
     return video;
   }
@@ -36,6 +37,7 @@ public class Mapper {
         .withProviderId(video.getProviderId())
         .withProviderVideoId(video.getProviderVideoId())
         .withTitle(video.getTitle())
+        .withDancerIdList(video.getDancerIdList())
         .build();
   }
 }
