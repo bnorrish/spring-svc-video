@@ -26,7 +26,7 @@ public class VideoSearchController {
   @Autowired
   DancerSearchService dancerSearchService;
 
-  @RequestMapping(value="/v/{videoId}",method= RequestMethod.GET)
+  @RequestMapping(value="/v/{videoId}",method = RequestMethod.GET)
   public Video getVideo(
       @PathVariable String videoId
   ) {
@@ -40,7 +40,7 @@ public class VideoSearchController {
     return video;
   }
 
-  @RequestMapping(value="/v")
+  @RequestMapping(value="/v", method = RequestMethod.GET)
   public List<Video> searchVideos(
       @RequestParam(value = "wsdc-id", required = false) Integer wsdcId) {
 

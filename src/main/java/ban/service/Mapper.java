@@ -3,6 +3,7 @@ package ban.service;
 import org.springframework.stereotype.Component;
 
 import ban.model.persistence.VideoD;
+import ban.model.persistence.VideoDBuilder;
 import ban.model.view.Video;
 
 /**
@@ -26,5 +27,15 @@ public class Mapper {
     video.setTitle(pVideo.getTitle());
 
     return video;
+  }
+
+  public VideoD mapToPersistanceModel(Video video) {
+
+    return new VideoDBuilder()
+        .withId(video.getId())
+        .withProviderId(video.getProviderId())
+        .withProviderVideoId(video.getProviderVideoId())
+        .withTitle(video.getTitle())
+        .build();
   }
 }

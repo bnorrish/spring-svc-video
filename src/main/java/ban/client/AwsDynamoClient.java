@@ -26,4 +26,13 @@ public class AwsDynamoClient {
     return dynamoMapper.load(VideoD.class,id);
   }
 
+  public VideoD createVideo(VideoD video) {
+
+    // Id will be Dynamo auto-generated UUID
+    video.setId(null);
+
+    dynamoMapper.save(video);
+    return video;
+  }
+
 }
